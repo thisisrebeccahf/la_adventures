@@ -8,6 +8,9 @@ Bundler.require(*Rails.groups)
 
 module LaAdventures
   class Application < Rails::Application
+    config.autoload_paths += %W(#{config.root}/app/uploaders)
+    # for the gem tha allows picture files
+    
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 
